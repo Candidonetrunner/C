@@ -14,11 +14,11 @@ int tentativas = 0;
 printf("Bem-Vindo\n");
 while (1){
 printf ("digite 'cadastro' para se cadastrar e 'login' para fazer login\n");
-scanf ("%s", acesso);
+scanf ("%9s", acesso);
 if (strcmp(acesso, "cadastro")==0){
 printf ("Escolha seu login e cadastro\n");
-printf("login:");scanf ("%s", login); 
-printf("senha:");scanf ("%s", senhav); 
+printf("login:");scanf ("%9s", login); 
+printf("senha:");scanf ("%9s", senhav); 
 }
 else if (strcmp(acesso, "login")==0){
 while(1){
@@ -26,9 +26,9 @@ if (tentativas >= 3){
 printf("limite de tentativas alcançado");
 break;
 }
-printf("login:");scanf("%s", username);
-printf("senha:");scanf("%s", senha);
-if(strcmp(username, login)==0 & strcmp(senha, senhav)==0 ) {
+printf("login:");scanf("%9s", username);
+printf("senha:");scanf("%9s", senha);
+if(strcmp(username, login)==0 && strcmp(senha, senhav)==0 ) {
 printf ("acesso liberado\n");
 break;
 }
