@@ -10,6 +10,7 @@ char senha[10];
 char senhav[10];
 char acesso[10];
 int tentativas = 0;
+int cadastro = 0;
 
 printf("Bem-Vindo\n");
 while (1){
@@ -19,11 +20,15 @@ if (strcmp(acesso, "cadastro")==0){
 printf ("Escolha seu login e cadastro\n");
 printf("login:");scanf ("%9s", login); 
 printf("senha:");scanf ("%9s", senhav); 
+cadastro += 1;
+}
+else if (strcmp(acesso, "login")==0 && cadastro == 0){
+printf ("nenhum cadastro realizado\n");
 }
 else if (strcmp(acesso, "login")==0){
 while(1){
 if (tentativas >= 3){
-printf("limite de tentativas alcançado");
+printf("limite de tentativas alcancado\n");
 break;
 }
 printf("login:");scanf("%9s", username);
@@ -38,7 +43,7 @@ printf("login ou senha incorreto\nrestam %d tentativas\n", 3 - tentativas);
 }
 }
 }
-else {printf("comando invalido");
+else {printf("comando invalido\n");
 }
 }
 }
