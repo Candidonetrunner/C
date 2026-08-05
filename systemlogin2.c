@@ -44,7 +44,7 @@ int main(){
                 printf("senha:");scanf("%9s", senha);
                 if(strcmp(username, flogin)==0 && strcmp(senha, fsenha)==0 ) {
                     printf ("acesso liberado\n");
-                    break;
+                    break;	
                 }
                 else { 
                     tentativas += 1; 
@@ -56,4 +56,7 @@ int main(){
             printf("comando invalido\n");
         }
     }
+}
+
+for(int i = 0; i < 10; i++) {
 }
